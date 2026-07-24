@@ -1,1 +1,2 @@
-*.html linguist-detectable=false
+Data/** linguist-generated
+processed_data/** linguist-generated
