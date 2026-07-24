@@ -9,7 +9,7 @@ _GEMINI_DIM=3072
 _FALLBACK_DIM=763
 
 _active_model = None
-_model_type = str| None=None
+_model_type = str| None
 
 def _probe_gemini() -> GoogleGenerativeAIEmbeddings | None:
     """Probe the Gemini API to check if it's available and working."""

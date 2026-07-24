@@ -1,14 +1,14 @@
 import os
 from dotenv import load_dotenv
-from pydantic import BaseSettings
+# from pydantic import BaseSettings
 
 load_dotenv()
 
-class AppSettings(BaseSettings):
+class AppSettings():
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
 
     QDRANT_API_KEY: str = os.getenv("QDRANT_API_KEY")
-    QDRANT_URL: str = os.getenv("QDRANT_URL") 
+    QDRANT_URL: str = os.getenv("QDRANT_CLUSTER_ENDPOINT") 
     QDRANT_COLLECTION: str = os.getenv("QDRANT_COLLECTION")
 
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")

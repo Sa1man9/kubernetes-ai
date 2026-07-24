@@ -16,13 +16,17 @@ from app.ingestion.loaders.text import parse_text
 from app.ingestion.loaders.office import parse_office
 from app.ingestion.chunking.splitter import chunk_text
 
-logfire.configure(service="kubernetes-ai-ingestion-service")
+logfire.configure(service_name="kubernetes-ai-ingestion-service")
 
 PROCESSED_DATA_DIR = "processed_data"
+
+print(f"qdrant url: {settings.QDRANT_URL}")
+print(f"qdrant url: {settings.QDRANT_API_KEY}")
 
 qdrant_client = QdrantClient(
     url=settings.QDRANT_URL,
     api_key=settings.QDRANT_API_KEY,
+    timeout=120,
 )
 
 def save_processed_locally(data: dict, source_type: str, filename: str) -> str:
