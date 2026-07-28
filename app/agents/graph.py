@@ -19,7 +19,7 @@ def route_planner(state:AgentState):
 
 workflow.set_entry_point("planner")
 
-workflow.add_conditional_edge(
+workflow.add_conditional_edges(
     "planner",
     route_planner,
     {

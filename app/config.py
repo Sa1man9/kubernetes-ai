@@ -12,7 +12,7 @@ class AppSettings(BaseSettings):
     QDRANT_COLLECTION: str = os.getenv("QDRANT_COLLECTION")
 
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY")
-    GROQ_FALLBACK_KEY: str = os.getenv("GROQ_FALLBACK_KEY")
+    GROQ_FALLBACK_KEY: str = os.getenv("GROQ_FALLBACK_API_KEY")
     GROQ_MODEL: str = os.getenv("GROQ_MODEL")
 
     EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL")
