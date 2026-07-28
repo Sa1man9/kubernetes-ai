@@ -5,7 +5,7 @@ import logfire
 
 llm =ChatGroq(api_key=settings.GROQ_API_KEY,model=settings.GROQ_MODEL, temperature=0)
 
-def generate_node(state:AgentState):
+def responder_node(state:AgentState):
 
     query=state["current_query"]
 
