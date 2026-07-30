@@ -53,7 +53,7 @@ def responder_node(state:AgentState):
         USER QUESTION:
         "{user_msg}"
         """
-    with logfire.info("llm synthesis"):
+    with logfire.span("llm synthesis"):
         try:
             content=llm.invoke(prompt).content
 
@@ -63,7 +63,7 @@ def responder_node(state:AgentState):
                 "final_answer":content,
                 "status":"Response generated.",
                 "plan":state["plan"],
-                "messages":[{"role":"assisstant","content":content}]
+                "messages":[{"role":"assistant","content":content}]
             }
         except Exception as e:
             logfire.error(f"LLM Generation failed: {e}")
