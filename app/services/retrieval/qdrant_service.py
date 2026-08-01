@@ -31,8 +31,7 @@ def search_knowledge(query:str, limit:int=8):
                 "source":res.payload.get("source","Unknown"),
                 "score":res.score
             })
-
         return results
     except Exception as e:
-        logfire.error(f"Qdrant search failed: {e}");
+        logfire.error(f"Qdrant search failed: {e}")
         return []

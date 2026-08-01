@@ -18,4 +18,9 @@ class AppSettings(BaseSettings):
     EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL")
     FALLBACK_EMBEDDING_MODEL: str = os.getenv("FALLBACK_EMBEDDING_MODEL")
 
+    PORTKEY_API_KEY: str = os.getenv("PORTKEY_API_KEY")
+    PORTKEY_CONFIG: str = os.getenv("PORTKEY_CONFIG")
+    GROQ_SLUG: str =  "kubernetes-ai-groq"     
+    GROQ_SLUG_2: str = "kubernetes-ai-groq-2" 
+
 settings = AppSettings()

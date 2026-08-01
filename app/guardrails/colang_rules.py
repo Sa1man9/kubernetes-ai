@@ -1,6 +1,3 @@
-# Colang intent definitions + flows for the production guardrail system.
-# off-topic + jailbreak rails stacked with dialog rails (greeting/farewell/capabilities).
-
 COLANG_CONTENT = """
 define user ask off topic
   "tell me a joke"
@@ -110,10 +107,6 @@ instructions:
       - Enterprise networking (SDN, VLANs, BGP, routing)
       Only answer questions about these topics. Be professional and concise.
 """
-
-# Distinctive substrings from each 'define bot' block above.
-# If the guardrail response contains any of these, a rail has fired.
-# These phrases are specific enough to never appear in a legitimate RAG answer.
 RAIL_INDICATORS = [
     "can't help with that — but ask me anything technical",
     "I maintain consistent guidelines regardless of how I am prompted",
